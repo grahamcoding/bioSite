@@ -9,18 +9,45 @@ body {
   margin: 0;
   font-family: 'Georgia', serif;
   display: grid;
-  grid-template-columns: 20% 80%; /* Sidebar vs main content */
+  grid-template-columns: 20% 80%;
   height: 100vh;
   background-color: #fdfcf7;
   color: #333;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header */
+header {
+  grid-column: 1 / span 2;
+  background-color: #f0f0f0;
+  padding: 8px 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: right;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / span 2;
+  background-color: #f0f0f0;
+  padding: 8px 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: left;
+  color: #666;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
 }
 
 /* Sidebar layout */
 .sidebar {
   display: grid;
-  grid-template-rows: auto 1fr; /* Menu on top, info below */
+  grid-template-rows: auto 1fr;
   grid-column: 1;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Navigation menu with burlap texture */
@@ -37,7 +64,7 @@ nav {
 nav h2 {
   margin-top: 0;
   font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   color: #fff;
 }
@@ -50,7 +77,7 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60%;
+  height: 25%;
 }
 
 nav ul li {
@@ -71,18 +98,18 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Flower on Menu */
+/* Flower image */
 .flower {
   position: absolute;
-  bottom: -50px;
-  right: -50px;
-  width: 150px;
+  bottom: -80px;
+  right: -100px;
+  width: 220px;
   z-index: 1000;
   opacity: 0.9;
   pointer-events: none;
 }
 
-/* "Info" section */
+/* Info section */
 .info {
   background-color: #a3926f;
   padding: 15px;
@@ -101,7 +128,7 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
-/* Info section images as postcards */
+/* Info section images */
 .info img {
   width: 100%;
   max-width: 140px;
@@ -124,7 +151,7 @@ nav ul li a:hover {
 main {
   grid-column: 2;
   position: relative; 
-  padding: 100px 40px 20px 80px; /* top padding increased for course title */
+  padding: 100px 40px 20px 80px;
   background-color: #fdfcf7;
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
   background-repeat: repeat;
@@ -158,12 +185,12 @@ main p {
   right: 40px;
   font-size: 1rem;
   font-family: 'Playfair Display', serif;
-  color: #aaa; /* lighter text */
+  color: #aaa;
   font-weight: bold;
   text-align: right;
 }
 
-/* Index Page Portrait image as stamp in bottom-right corner */
+/* Portrait image */
 .portrait {
   position: absolute;
   bottom: 40px;
