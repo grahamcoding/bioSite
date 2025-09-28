@@ -195,7 +195,7 @@ main p {
   position: absolute;
   bottom: 40px;
   right: 40px;
-  width: 400px;
+  width: 200px;
   border-radius: 50%;
   border: 5px solid #b8a089;
   box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
